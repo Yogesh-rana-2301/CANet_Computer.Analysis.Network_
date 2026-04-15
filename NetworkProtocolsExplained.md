@@ -1,7 +1,5 @@
 # Network Protocols Explained - Placement Notes
-
-This file captures all concepts taught in your transcript, organized for fast revision.
-
+  
 ## 1. IP Explained (Internet Protocol)
 
 ### What IP is
@@ -11,14 +9,7 @@ This file captures all concepts taught in your transcript, organized for fast re
 - Every internet-connected device has an IP address (phone, laptop, server).
 - IP address is a numerical label used to identify devices on a network.
 - Analogy: home address for a house.
-
-### Historical context
-
-- IP was formally specified in RFC 791 (September 1981).
-- Work was done for DARPA.
-- Design goal: resilient communication with no single point of failure and no central control.
-- This early design choice is a major reason the internet is decentralized.
-
+  
 ### How IP transports data
 
 - IP breaks data into packets.
@@ -83,11 +74,7 @@ Analogy from transcript:
 
 - UDP (User Datagram Protocol) is intentionally minimal.
 - It is the design opposite of TCP for reliability features.
-
-### Historical context
-
-- Specified in RFC 768 (August 1980) by John Postel.
-
+  
 ### What UDP removes
 
 - No handshake
@@ -127,6 +114,104 @@ Analogy from transcript:
 
 ### What DNS does
 
+> Nameserver: A nameserver is a specialized server within the Domain Name System (DNS) that acts as the internet's "phone book," translating human-readable domain names (e.g., example.com) into numerical IP addresses (e.g., 192.0.2.1) that computers use to locate websites. They store DNS records, such as A, CNAME, and MX records, directing traffic to the correct web host.
+
+### DNS Resolution Order
+- Local Cache (Browser + OS)
+  - Browser cache checked first
+  - Then OS-level cache (/etc/hosts, DNS cache)
+- Recursive Resolver (ISP DNS / Public DNS)
+  - If not cached locally, request goes to a resolver (e.g., Google Public DNS or Cloudflare DNS)
+- Root Name Server
+  - Resolver asks: “Where is .com?”
+  - Root servers respond with TLD servers
+- TLD (Top-Level Domain) Name Server
+  - Example: .com, .org, .in
+  - Tells where the authoritative server for example.com is
+- Authoritative Name Server
+  - Final authority for the domain
+  - Returns actual IP address of www.example.com
+- Response Returned Back
+  - Resolver caches it
+  - Sends IP back to your system
+  - Browser connects to that IP
+
+# DNS Name Server Hierarchy
+
+## 🌐 1. Root Name Server
+
+### 🔹 What it is
+Top-level entry point of DNS hierarchy.
+
+### 🔹 What it stores
+- Does NOT store IPs of websites  
+- Stores:
+  - List of all TLDs (.com, .org, .in, etc.)
+  - Pointers (NS records) to TLD name servers  
+
+### 🔹 Example
+You ask: `www.google.com`  
+Root server says:  
+“I don’t know Google, but ask .com servers.”
+
+---
+
+## 🌍 2. TLD (Top-Level Domain) Name Server
+
+### 🔹 What it is
+Handles domains under a specific extension (like .com, .in)
+
+### 🔹 What it stores
+- Does NOT store final IPs (usually)  
+- Stores:
+  - Which authoritative name server handles a domain  
+  - NS records for domains under it  
+
+### 🔹 Example
+You ask .com server: `google.com`  
+It says:  
+“Go to Google’s authoritative name server.”
+
+---
+
+## 🧠 3. Authoritative Name Server
+
+### 🔹 What it is
+Final source of truth for a domain
+
+### 🔹 What it stores
+- Actual DNS records:
+  - A → domain → IP  
+  - AAAA → domain → IPv6  
+  - CNAME → alias  
+  - MX → mail servers  
+  - TXT → verification/security  
+  - NS → its own name servers  
+
+### 🔹 Example
+You ask: `www.google.com`  
+It responds:  
+“Here is the IP: 142.250.x.x”
+
+---
+
+## ⚡ Clean Mental Model
+
+| Layer           | Knows About       | Stores                         |
+|----------------|------------------|--------------------------------|
+| Root           | TLDs             | “Where is .com?”               |
+| TLD            | Domains          | “Where is google.com?”         |
+| Authoritative  | Specific domain  | “Here is the IP”               |
+
+---
+
+## 🧠 Ultra-Short Analogy
+
+- Root = Phonebook index (which section to go to)  
+- TLD = Section (which page/person)  
+- Authoritative = Exact contact details
+
+
 - DNS (Domain Name System) maps domain names to IP addresses.
 - Users type names like google.com, not numeric IPs.
 
@@ -154,8 +239,14 @@ Analogy from transcript:
 
 ### What HTTP is
 
-- HTTP (Hypertext Transfer Protocol) is browser-server application protocol.
-- Invented by Tim Berners-Lee in 1989 at CERN.
+- HTTP (Hypertext Transfer Protocol) is browser-server application protocol. 
+
+
+|Layer	|Protocol	|Role|
+|----------------|------------------|--------------------------------|
+|Application	|HTTP	|Defines request/response (GET, POST)|
+|Transport	|TCP	|Ensures reliable delivery|
+|Network	|IP	|Handles addressing & routing|
 
 ### Model
 
@@ -183,6 +274,51 @@ Analogy from transcript:
 
 - HTTPS is HTTP protected by TLS encryption.
 
+- ## 🔒 What TLS Actually Does
+
+### 1. Encryption
+- Converts data into unreadable form  
+- Prevents attackers from reading it  
+
+### 2. Integrity
+- Ensures data is not modified in transit  
+
+### 3. Authentication
+- Verifies the server is genuine (not fake)  
+
+---
+
+## 🧠 How It Works (High-Level Flow)
+
+### Step 1: Handshake
+- Client connects to server  
+- Server sends certificate (proof of identity)  
+
+### Step 2: Key Exchange
+- Both agree on a shared secret key  
+
+### Step 3: Secure Communication
+- All further data is encrypted  
+
+---
+
+## 🌐 Example
+
+### Without TLS:
+```http
+GET /password=1234
+```
+### Anyone can read this ❌
+With TLS:
+Encrypted gibberish
+### Only server can decrypt ✅
+## Key Concept
+TLS uses:
+Asymmetric encryption (initial handshake)
+Symmetric encryption (fast data transfer)
+
+--- 
+
 ### Why HTTPS matters
 
 - Without HTTPS, traffic is plain text and can be read if intercepted.
@@ -209,10 +345,6 @@ Analogy from transcript:
 - MQTT = Message Queuing Telemetry Transport.
 - Designed for constrained, unreliable, high-latency links.
 
-### Historical context
-
-- Created in 1999 by Andy Stanford-Clark (IBM) and Arlen Nipper (Arcom).
-- Original use case: remote oil pipeline monitoring over satellite links.
 
 ### Communication model
 
