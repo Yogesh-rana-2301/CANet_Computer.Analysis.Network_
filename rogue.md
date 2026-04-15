@@ -1,0 +1,1 @@
+In computer networking, the standard maximum packet size is typically 1,500 bytes (including headers) for Ethernet, known as the Maximum Transmission Unit (MTU). While maximum size is 65,535 bytes, in practice, packets are usually between 20 and 1,500 bytes to avoid fragmentation. Minimum packet size is generally 64 bytes
