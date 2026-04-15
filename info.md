@@ -2,11 +2,8 @@
 
 This file is a comprehensive networking glossary for study and placement preparation.
 
-## How to use this file
-
-1. Revise 20 terms daily.
-2. Practice explaining each term in one line without reading.
-3. Focus first on high-frequency interview terms: IP, TCP, UDP, DNS, HTTP, HTTPS, NAT, DHCP, VPN, VLAN, BGP.
+## How to use this file 
+Focus first on high-frequency interview terms: IP, TCP, UDP, DNS, HTTP, HTTPS, NAT, DHCP, VPN, VLAN, BGP.
 
 ## Core Internet and Web Terms
 
