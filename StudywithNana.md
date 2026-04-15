@@ -1,20 +1,9 @@
 # Study with Nana - Computer Networking Notes
 
 These notes capture the full learning flow from the video using the TravelBody example (an imaginary travel booking app) that grows from one server to cloud-native Kubernetes.
+ 
 
-## 1. Intro and Learning Approach
-
-The teaching style is progressive:
-
-1. Start with a single server.
-2. Add complexity only when a real problem appears.
-3. Learn the networking concept that solves that problem.
-
-Core idea: networking concepts remain the same even when tools change (physical servers -> cloud -> containers -> Kubernetes).
-
----
-
-## 2. Single Server Stage: IP and DNS
+## 1. Single Server Stage: IP and DNS
 
 ### Why this matters
 
@@ -38,7 +27,7 @@ IP identifies where to send data; DNS makes IP usable for humans.
 
 ---
 
-## 3. Multiple Apps on One Server: Ports
+## 2. Multiple Apps on One Server: Ports
 
 ### Problem
 
@@ -73,7 +62,7 @@ IP gets traffic to the machine; port gets traffic to the right process.
 
 ---
 
-## 4. Security and Segmentation: Subnets, Routing, Firewalls
+## 3. Security and Segmentation: Subnets, Routing, Firewalls
 
 ### Problem
 
@@ -122,7 +111,7 @@ Segmentation reduces blast radius, routing enables needed communication, firewal
 
 ---
 
-## 5. NAT (Network Address Translation)
+## 4. NAT (Network Address Translation)
 
 ### Problem
 
@@ -149,7 +138,7 @@ NAT enables private instances to access internet while staying hidden from direc
 
 ---
 
-## 6. Cloud Networking: VPC, Subnets, Gateways, Route Tables
+## 5. Cloud Networking: VPC, Subnets, Gateways, Route Tables
 
 ### Why move to cloud
 
@@ -189,25 +178,9 @@ Concepts do not change in cloud. They are provided as managed services.
 
 Cloud abstracts hardware, not fundamentals. You still design around IPs, subnets, routing, and security.
 
----
+--- 
 
-## 7. Infrastructure as Code Mention (Pulumi)
-
-The video includes a sponsor segment that introduces infrastructure as code tooling.
-
-Main points covered:
-
-- Define infrastructure using general-purpose languages (TypeScript, Python, Go, Java, etc.).
-- Benefits: IDE support, autocomplete, refactoring, debugging, reusable logic.
-- Mentioned AI capability for infra workflows (Pulumi Neo).
-
-Study relevance:
-
-- Not a core networking concept, but important for operationalizing cloud networking reliably.
-
----
-
-## 8. Container Networking (Docker)
+## 6. Container Networking (Docker)
 
 ### Why containers were introduced
 
@@ -243,7 +216,7 @@ Container networking introduces host/container boundaries and multi-host virtual
 
 ---
 
-## 9. Kubernetes Networking
+## 7. Kubernetes Networking
 
 ### Problem at scale
 
@@ -284,30 +257,9 @@ Example routing pattern:
 
 In Kubernetes, pods are dynamic, services provide stability, and ingress provides controlled external access.
 
----
+--- 
 
-## 10. Final Recap: 5 Networking Fundamentals
-
-These are the five foundations emphasized in the video:
-
-1. IP addressing and DNS
-2. Ports
-3. Subnetting and routing
-4. Firewalls/security filtering
-5. NAT for private-to-public communication
-
-These remain valid across:
-
-- Traditional servers
-- Cloud environments
-- Containers
-- Kubernetes
-
-Tools and implementations change, but principles stay constant.
-
----
-
-## 11. Placement-Oriented Revision Checklist
+## 8. Placement-Oriented Revision Checklist
 
 Use this checklist before interviews:
 
@@ -322,7 +274,7 @@ Use this checklist before interviews:
 
 ---
 
-## 12. Fast Self-Test Questions
+## 9. Fast Self-Test Questions
 
 1. If DNS is down but IP is known, can users still access the app?
 2. Why is opening all ports dangerous even inside a private network?
