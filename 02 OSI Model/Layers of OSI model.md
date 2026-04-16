@@ -1,5 +1,8 @@
 # Layers of OSI Model
 
+
+> A Protocol Data Unit (PDU) in networking is a specific, structured block of data transmitted between peer entities in a network, comprising control information (header/trailer) and user data (payload)
+
 ## Layer 7: Application
 
 Function:
