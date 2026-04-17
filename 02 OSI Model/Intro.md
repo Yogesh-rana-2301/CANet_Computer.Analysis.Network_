@@ -78,15 +78,4 @@ Headers are removed layer by layer, and eventually the web server processes the 
 To conclude, the OSI model is one way of thinking about networks.
 Its primary purpose is educational.
 Even though the layers do not fit real-world use cases perfectly, they are still widely used by networking vendors and cloud providers as a shorthand to describe where networking products sit in the OSI model.
-
-## Cloud Load Balancers
-
-For example, cloud load balancers are broadly divided into two categories: L4 and L7.
-
-An L7 load balancer is shorthand for a load balancer that operates at the application protocol layer, such as HTTP or HTTPS.
-
-An L4 load balancer, on the other hand, operates at the TCP level.
-
-If you'd like to learn more about system design, check out our books and weekly newsletter.
-Please subscribe if you learned something new.
-Thank you so much, and we'll see you next time.
+ 
