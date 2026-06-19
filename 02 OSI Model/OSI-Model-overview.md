@@ -10,19 +10,19 @@ The OSI (Open Systems Interconnection) model is a 7-layer framework used to unde
 
 ## The 7 layers (top to bottom)
 
-7. Application
+- 7. Application
 
-6. Presentation
+- 6. Presentation
 
-5. Session
+- 5. Session
 
-4. Transport
+- 4. Transport
 
-3. Network
+- 3. Network
 
-2. Data Link
+- 2. Data Link
 
-1. Physical
+- 1. Physical
 
 
 ## Simple data flow idea
