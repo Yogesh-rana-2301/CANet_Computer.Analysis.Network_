@@ -257,6 +257,7 @@ Step 1: Add segments (binary addition)
 ──────────
  100000000   ← 9 bits (overflow/carry!)
 
+wrap areound becuase 1 is carry 
 Step 2: Wrap-around carry (add carry to LSB)
   00000000
 +        1
