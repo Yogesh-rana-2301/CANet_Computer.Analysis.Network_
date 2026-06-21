@@ -1,4 +1,4 @@
-# 📶 Multiple Access Protocols — ALOHA & CSMA/CD
+# Multiple Access Protocols — ALOHA & CSMA/CD
 
 > **Problem**: Multiple devices share a single broadcast channel. How do they coordinate transmission to avoid collisions?
 

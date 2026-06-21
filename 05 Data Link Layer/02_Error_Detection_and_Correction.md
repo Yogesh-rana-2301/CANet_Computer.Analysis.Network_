@@ -160,24 +160,7 @@ Data with appended zeros = 1011001 000
 Key Rule: Subtract using XOR (no borrows; 1⊕1=0, 0⊕0=0, 1⊕0=1)
 
    1011001000   ÷   1011
-   
-Step 1:  1011
-         1011
-         ─────
-         0000  ← XOR result; bring down next bit → 0001
-         
-Step 2:  0001 → leading zero, so divisor doesn't fit; bring down → 00010
-         
-Step 3:  00010 → still small; bring down → 000100
-         
-...Let's do it properly:
-
-  1011001000
-  1011
-  ──────────
-  0000001000
-      (bring down: 0001)
-  
+ 
 Let me redo cleanly with alignment:
 
 Dividend: 1 0 1 1 0 0 1 0 0 0
@@ -186,18 +169,13 @@ Divisor:  1 0 1 1
   1011001000
   1011
   ─────
+  00000         (bring down 0)
   00001         (bring down 0)
   00010         (bring down 0)
-  00100         (bring down 1)
-  01001         (bring down 0)
-  10010         → 1011 fits (leading 1)
-  10010
-  1011
-  ──────
   00100         (bring down 0)
   01000         (bring down 0)
-  10000         → 1011 fits
-  10000
+  
+  1000
   1011
   ──────
   0011  ← REMAINDER = 011 (3 bits = degree of generator)
@@ -279,6 +257,7 @@ Step 1: Add segments (binary addition)
 ──────────
  100000000   ← 9 bits (overflow/carry!)
 
+wrap areound becuase 1 is carry 
 Step 2: Wrap-around carry (add carry to LSB)
   00000000
 +        1

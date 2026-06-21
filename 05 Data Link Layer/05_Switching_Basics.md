@@ -1,4 +1,4 @@
-# 🔀 Switching Basics
+# Switching Basics
 
 > **Switching** = The mechanism by which a network transfers data from a source to a destination across interconnected nodes.
 
