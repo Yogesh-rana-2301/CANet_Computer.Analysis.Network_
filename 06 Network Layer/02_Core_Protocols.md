@@ -1,4 +1,4 @@
-# 📬 Core Protocols — ICMP & ARP
+# Core Protocols — ICMP & ARP
 
 > ⭐ **ARP is VERY IMPORTANT** — frequently asked in interviews at all levels!
 
