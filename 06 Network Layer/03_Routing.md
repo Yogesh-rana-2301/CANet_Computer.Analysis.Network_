@@ -1,4 +1,4 @@
-# 🗺️ Routing — Distance Vector, Link State, RIP vs OSPF vs BGP
+# Routing — Distance Vector, Link State, RIP vs OSPF vs BGP
 
 ---
 
@@ -386,7 +386,7 @@ ISP-A (AS 100) ──eBGP── ISP-B (AS 200) ──eBGP── ISP-C (AS 300)
 5. Lowest **MED** (Multi-Exit Discriminator)
 6. **eBGP** over **iBGP**
 
-### 4.5 Complete Comparison Table
+### <mark> 4.5 Complete Comparison Table
 
 | Feature | RIP | OSPF | BGP |
 |---------|-----|------|-----|
@@ -402,7 +402,7 @@ ISP-A (AS 100) ──eBGP── ISP-B (AS 200) ──eBGP── ISP-C (AS 300)
 | **Loops** | Count-to-infinity | No loops | AS path prevents loops |
 | **Admin overhead** | Low | High | Very high |
 | **Use case** | Simple/small nets | Enterprise | Internet routing |
-
+</mark>
 ---
 
 ## 5. Interview Questions
