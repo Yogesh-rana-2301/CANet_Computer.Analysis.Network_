@@ -1,6 +1,19 @@
+
+
 # CANet
 
 Computer Networks study and practice repository focused on placement preparation.
+
+| S.No | Topic | Completion Date | Revision Date | Fully |
+|------|-------|----------------|---------------|-------|
+| 1    |  Introduction to CN      |    19 June 2026            |    20 June 2026            | ☐     |
+| 2    |  OSI model     |      19 June 2026          |    20 June 2026            | ☐     |
+| 3    |  TCP - IP     |       19 June 2026         |      20 June 2026          | ☐     |
+| 4    |  Physical layer     |  20 June 2026            |    21 June 2026            | ☐     |
+| 5    |  DLL      |     20 June          |      21 June 2026          | ☐     |
+| 6    |  Network Layer    |      21 -22 June 20226         |    22-23 June 2026            | ☐     |
+| 7    |  switching and delays     |     21 -22 June 2026           |     22-23 June 2026           | ☐     |
+
 
 ## How to use this repo
 
