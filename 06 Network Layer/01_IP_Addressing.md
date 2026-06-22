@@ -1,4 +1,4 @@
-# 🏠 IP Addressing — IPv4, IPv6 & Subnetting
+# IP Addressing — IPv4, IPv6 & Subnetting
 
 > ⭐ **VERY IMPORTANT** — Subnetting questions are extremely common in networking interviews!
 
