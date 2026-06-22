@@ -1,4 +1,4 @@
-# 🔧 Other Concepts — Fragmentation, Tunneling & NAT
+#  Other Concepts — Fragmentation, Tunneling & NAT
 
 ---
 
@@ -20,7 +20,7 @@ Large Packet (4000 bytes)
   └─────────────────┘
             │
             ▼ Reassembled at destination
-Large Packet (4000 bytes) ✅
+Large Packet (4000 bytes) 
 ```
 
 ### 1.2 MTU — Maximum Transmission Unit
