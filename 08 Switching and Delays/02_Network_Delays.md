@@ -1,4 +1,4 @@
-# ⏱️ Network Delays ⭐
+#  Network Delays  
 
 > Understanding the four sources of delay is fundamental to network performance analysis. This is a very common interview and exam topic!
 
