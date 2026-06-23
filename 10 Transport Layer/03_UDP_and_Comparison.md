@@ -1,4 +1,4 @@
-# ⚡ UDP & TCP vs UDP Comparison
+#  UDP & TCP vs UDP Comparison
 
 > ⭐ **TCP vs UDP is one of the most asked questions in software engineering interviews.**
 
