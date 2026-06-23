@@ -1,4 +1,4 @@
-# 🔗 TCP — Transmission Control Protocol (Deep Dive)
+#  TCP — Transmission Control Protocol (Deep Dive)
 
 > ⭐ **VERY HIGH PRIORITY** — TCP is one of the most important protocols in all of networking. Know this inside-out.
 
