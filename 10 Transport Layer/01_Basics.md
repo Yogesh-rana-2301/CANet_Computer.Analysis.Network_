@@ -1,4 +1,4 @@
-# ⚙️ Transport Layer — Basics
+#   Transport Layer — Basics
 
 > The Transport Layer sits between the Application Layer and the Network Layer. It is responsible for delivering data between **specific processes** (not just hosts) and can optionally provide reliability.
 
