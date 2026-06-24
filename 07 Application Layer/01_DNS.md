@@ -1,4 +1,4 @@
-# 🔍 DNS — Domain Name System
+#   DNS — Domain Name System
 
 > DNS is the **"phone book of the internet"** — it translates human-readable domain names into IP addresses.
 
