@@ -1,4 +1,4 @@
-# 🌍 HTTP & HTTPS
+#   HTTP & HTTPS
 
 > **HTTP** is the foundation of all data exchange on the Web. Understanding it deeply is essential for any software/networking interview.
 
