@@ -1,4 +1,4 @@
-# 🛠️ Network Troubleshooting
+#   Network Troubleshooting
 
 > Knowing how to diagnose network problems is as important as knowing how networks work. These tools and concepts are asked in both SDE and SRE/DevOps interviews.
 
