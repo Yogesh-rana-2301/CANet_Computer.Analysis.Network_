@@ -14,6 +14,9 @@ Computer Networks study and practice repository focused on placement preparation
 | 6    |  Network Layer    |      21 -22 June 20226         |    22-23 June 2026            | ☐     |
 | 7    |  switching and delays     |     21 -22 June 2026           |     22-23 June 2026           | ☐     |
 | 8    |  Transport Layer     |     23 June 2026           |     24 June 2026           | ☐     |
+| 9    |  Application Layer     |     24 June 2026           |     24 June 2026           | ☐     |
+| 10    |  Troubleshooting and security Layer     |     25 June 2026           |     25 June 2026           | ☐     |
+
 
 
 ## How to use this repo
