@@ -1,4 +1,4 @@
-# 🔐 Network Security
+# Network Security
 
 > Security is not a single feature — it's a set of **goals** achieved through **cryptographic tools** layered over the network stack.
 
